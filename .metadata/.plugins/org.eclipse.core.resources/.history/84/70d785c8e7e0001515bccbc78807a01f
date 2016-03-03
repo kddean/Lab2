@@ -1,0 +1,36 @@
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+import java.net.URL;
+
+public class ToDoClient {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		try{
+			String request = "http://localhost:8080/ToDoSystem/ToDo";
+			URL url = new URL(request);
+			HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+			
+			conn.setInstanceFollowRedirects( false );
+			conn.setRequestMethod( "GET" );
+			conn.setUseCaches( false );
+			
+			BufferedReader reader = new BufferedReader(new InputStreamReader(conn.getInputStream()));
+			String next_record = null;
+			while ((next_record = reader.readLine()) != null) {
+				System.out.println(next_record);
+					}
+
+		}catch (IOException e) {
+		throw new RuntimeException("Please try again. \n" + e);
+
+			}
+		
+		try{
+			
+		}
+	}
+}

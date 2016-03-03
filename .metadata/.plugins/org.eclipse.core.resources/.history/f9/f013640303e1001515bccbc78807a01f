@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>ToDoSystem</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="form-group">
+  <label for="sel1">What would you like to do? (Insert, Update, List, Delete, Exit)</label>
+  <select class="form-control" id="sel1">
+    <option>Insert</option>
+    <option>Update</option>
+    <option>List</option>
+    <option>Delete</option>
+    <option>Exit</option>
+  </select>
+</div>
+
+<button type="button" class="btn btn-success">Submit</button>
+
+</body>
+</html>
